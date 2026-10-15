@@ -1,6 +1,6 @@
 # Scope
 
-`@clocklobster/stripe-sales` imports Stripe **sales records for bookkeeping
+`@clocklobster/stripe-tx-import` imports Stripe **sales records for bookkeeping
 only**. The authoritative source is `GET /v1/balance_transactions`; every
 record maps to a provider-neutral `SalesRecord` (`src/types.ts`).
 

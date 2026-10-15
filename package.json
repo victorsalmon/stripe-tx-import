@@ -1,5 +1,5 @@
 {
-  "name": "@clocklobster/stripe-sales",
+  "name": "@clocklobster/stripe-tx-import",
   "publishConfig": {
     "access": "public"
   },
@@ -40,12 +40,12 @@
   "author": "Victor Salmon",
   "repository": {
     "type": "git",
-    "url": "https://github.com/victorsalmon/stripe-sales.git"
+    "url": "https://github.com/victorsalmon/stripe-tx-import.git"
   },
   "bugs": {
-    "url": "https://github.com/victorsalmon/stripe-sales/issues"
+    "url": "https://github.com/victorsalmon/stripe-tx-import/issues"
   },
-  "homepage": "https://github.com/victorsalmon/stripe-sales#readme",
+  "homepage": "https://github.com/victorsalmon/stripe-tx-import#readme",
   "dependencies": {
     "stripe": "^23.0.0"
   },

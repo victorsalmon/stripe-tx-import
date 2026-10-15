@@ -1,4 +1,4 @@
-# `stripe-sales`
+# `stripe-tx-import`
 
 Import Stripe **sales records for bookkeeping** — nothing else. Balance
 transactions map to provider-neutral `SalesRecord`s, sales webhooks verify
@@ -11,7 +11,7 @@ notes, or subscriptions; no Batch API; no MCP/skills/analytics runtime.
 ## Installation
 
 ```bash
-npm install @clocklobster/stripe-sales
+npm install @clocklobster/stripe-tx-import
 ```
 
 Requires Node 20+ and `stripe ^23.0.0` (installed as a dependency).
@@ -23,7 +23,7 @@ Requires Node 20+ and `stripe ^23.0.0` (installed as a dependency).
 ### Map a balance transaction
 
 ```typescript
-import { balanceTransactionToSalesRecord } from '@clocklobster/stripe-sales';
+import { balanceTransactionToSalesRecord } from '@clocklobster/stripe-tx-import';
 
 const [bt] = (await stripe.balanceTransactions.list({ limit: 1 })).data;
 // Stripe amounts are already cents — passed through, never multiplied.
@@ -50,7 +50,7 @@ import {
   backfillBalanceTransactions,
   createStripeBalanceTransactionClient,
   createStripeClient,
-} from '@clocklobster/stripe-sales';
+} from '@clocklobster/stripe-tx-import';
 
 const stripe = createStripeClient(process.env.STRIPE_SECRET_KEY!);
 const client = createStripeBalanceTransactionClient(stripe);
@@ -71,7 +71,7 @@ run with `npm run build && node examples/backfill.mjs`.
 import {
   UnsupportedEventTypeError,
   verifySalesWebhook,
-} from '@clocklobster/stripe-sales';
+} from '@clocklobster/stripe-tx-import';
 
 try {
   const signal = verifySalesWebhook({
