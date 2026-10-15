@@ -1,0 +1,61 @@
+{
+  "name": "@clocklobster/stripe-sales",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.1.0",
+  "description": "Import Stripe sales records for bookkeeping. Maps Stripe balance transactions to provider-neutral SalesRecords, verifies sales webhooks (signal-then-poll), and backfills history page-by-page. Sales only — no invoices, credit notes, or subscriptions.",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "keywords": [
+    "stripe",
+    "sales",
+    "bookkeeping",
+    "balance-transactions",
+    "webhooks",
+    "typescript"
+  ],
+  "author": "Victor Salmon",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/victorsalmon/stripe-sales.git"
+  },
+  "bugs": {
+    "url": "https://github.com/victorsalmon/stripe-sales/issues"
+  },
+  "homepage": "https://github.com/victorsalmon/stripe-sales#readme",
+  "dependencies": {
+    "stripe": "^23.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "fast-check": "^4.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
