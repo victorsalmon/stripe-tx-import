@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Import Stripe sales records for bookkeeping. Maps Stripe balance transactions to provider-neutral SalesRecords, verifies sales webhooks (signal-then-poll), and backfills history page-by-page. Sales only — no invoices, credit notes, or subscriptions.",
   "license": "MIT",
   "type": "module",
