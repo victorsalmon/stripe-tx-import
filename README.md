@@ -65,6 +65,8 @@ const records = await backfillBalanceTransactions(client, {
 Runnable example: [`examples/backfill.mjs`](./examples/backfill.mjs) —
 run with `npm run build && node examples/backfill.mjs`.
 
+Rate limits, the `429` shape, and idempotent-GET retry guidance: [`docs/RATE_LIMITS.md`](./docs/RATE_LIMITS.md).
+
 ### Verify a webhook (signal, then poll)
 
 ```typescript

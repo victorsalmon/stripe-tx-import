@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- `docs/RATE_LIMITS.md`: vendor-verified Stripe limits for the backfill
+  (global 100/second live / 25/second sandbox, default 25/second per
+  endpoint, `429` + `rate_limit` + `Stripe-Rate-Limited-Reason` shape,
+  `Stripe-Should-Retry` guidance, idempotent-GET retry rules) plus the host
+  checklist. Numeric concurrency limits and the minimum read-allocation
+  floor are marked UNVERIFIED (unpublished/illegible in vendor docs).
+
 ## [0.1.0] - 2026-10-15
 
 ### Added
